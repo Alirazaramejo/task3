@@ -27,9 +27,17 @@ const SingleProduct = () => {
 
   return (
     <div className="max-w-md mx-auto mt-8">
-      <h2 className="text-xl font-bold mb-4">{product.name}</h2>
-      <p className="text-gray-600">{product.description}</p>
-      <p className="mt-2 text-gray-700">${product.price}</p>
+     
+      <section className="flex flex-col justify-center bg-white rounded-2xl shadow-xl shadow-gray-400/20 w-full">
+              <img className="aspect-video w-full rounded-t-2xl object-cover object-center" src={product.thumbnail} alt="Placeholder" />
+              <div className="p-6">
+                <small className="text-gray-900 text-xs">{product.category}</small>
+                <h1 className="text-2xl font-medium text-gray-700 pb-2">{product.name}</h1>
+                <p className="text text-gray-500 leading-6">{product.description}</p>
+                <p className="text-gray-700">{product.price}</p>
+               
+              </div>
+            </section>
     </div>
   );
 };
